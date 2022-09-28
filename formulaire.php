@@ -4,7 +4,7 @@
 <form action="result.php" method="POST">
     <input type="text" name="firstName" placeholder="Nom"><br>
     <input type="text" name="lastName" placeholder="Prénom"><br>
-    <input type="text" name="mail" placeholder="E-mail"><br>
+    <input type="email" id="email" name="mail" placeholder="Adresse mail" size="30" required><br>
     <input type="text" name="phoneNumber" placeholder="Numéro de téléphone"><br>
     <select name="sujet">
         <option value="Annonce">Annonce</option>
