@@ -15,6 +15,8 @@ if (isset($_POST['submit'])) {
                 echo "Merci <strong>$lastName $firstName</strong> de nous avoir contacté à propos de “<strong>$sujet</strong>”.
                 Un de nos conseiller vous contactera soit à l’adresse <strong>$mail</strong> ou par téléphone au <strong>$phone</strong> dans les plus brefs délais pour traiter votre demande : <br><br>
                 $message";
+            } else {
+                echo "Numéro de téléphone non valide";
             }
         } else {
             echo "Votre mail n'est pas un mail valide !";
