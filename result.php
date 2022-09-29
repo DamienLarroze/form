@@ -7,7 +7,6 @@ if (isset($_POST['submit'])) {
                 $firstName = htmlspecialchars(stripslashes($_POST['firstName']));
                 $lastName = htmlspecialchars(stripslashes($_POST['lastName']));
                 $mail = htmlspecialchars(stripslashes($_POST['mail']));
-                $mail = filter_var(stripslashes($_POST['mail'], FILTER_VALIDATE_EMAIL));
                 $phone = htmlspecialchars(stripslashes($_POST['phoneNumber']));
                 $sujet = htmlspecialchars(stripslashes($_POST['sujet']));
                 $message = htmlspecialchars(stripslashes($_POST['message']));
