@@ -3,13 +3,13 @@
 if (isset($_POST['submit'])) {
     if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['mail']) && !empty($_POST['phoneNumber']) && !empty($_POST['sujet']) && !empty($_POST['message'])) {
         if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
-            $firstName = htmlspecialchars($_POST['firstName']);
-            $lastName = htmlspecialchars($_POST['lastName']);
-            $mail = htmlspecialchars($_POST['mail']);
-            $mail = filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL);
-            $phone = htmlspecialchars($_POST['phoneNumber']);
-            $sujet = htmlspecialchars($_POST['sujet']);
-            $message = htmlspecialchars($_POST['message']);
+            $firstName = htmlspecialchars(stripslashes($_POST['firstName']));
+            $lastName = htmlspecialchars(stripslashes($_POST['lastName']));
+            $mail = htmlspecialchars(stripslashes($_POST['mail']));
+            $mail = filter_var(stripslashes($_POST['mail'], FILTER_VALIDATE_EMAIL));
+            $phone = htmlspecialchars(stripslashes($_POST['phoneNumber']));
+            $sujet = htmlspecialchars(stripslashes($_POST['sujet']));
+            $message = htmlspecialchars(stripslashes($_POST['message']));
 
             echo "Merci <strong>$lastName $firstName</strong> de nous avoir contacté à propos de “<strong>$sujet</strong>”.
 
